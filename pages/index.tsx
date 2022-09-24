@@ -11,7 +11,7 @@ import Skills from "../components/Skills";
 
 const Home: NextPage = () => {
   return (
-    <div className="text-purple-7 h-screen bg-purple-2 snap-y snap-mandatory overflow-scroll z-0">
+    <div className="text-purple-7 h-screen bg-purple-2 snap-y snap-mandatory z-0 overflow-x-hidden">
       <Head>
         <title>Adesemi Chloe Elumaro</title>
       </Head>
