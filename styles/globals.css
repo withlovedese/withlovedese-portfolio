@@ -3,7 +3,6 @@
 @tailwind utilities;
 html,
 body {
-  background-color: #84cdee;
   padding: 0;
   margin: 0;
   font-family: -apple-system, Playfair Display, Segoe UI, Roboto, Oxygen,
@@ -13,4 +12,9 @@ body {
   box-sizing: border-box;
 }
 
+@layer components{
+  .heroBtn{
+    @apply px-6 py-2 border rounded-full uppercase mx-2 border-purple-3 text-xs tracking-widest text-purple-9 hover:border-purple-9/40 hover:text-purple-8 transition-all
+  }
+}
 
