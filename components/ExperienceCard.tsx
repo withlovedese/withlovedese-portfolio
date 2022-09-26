@@ -1,9 +1,14 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { Experience } from "../typings";
+import { urlFor } from "../sanity";
 
-type Props = {};
+type Props = {
+  experience: Experience;
+};
 
-const ExperienceCard = (props: Props) => {
+const ExperienceCard = ({ experience }: Props) => {
+  //console.log(experience.technologies);
   return (
     <article className="flex flex-col rounded-lg items-center space-y-7 flex-shrink-0 w-[500px] md:w-[600px] xl:w-[900px] snap-center bg-purple-1 p-10 hover:opacity-100 opacity-40 cursor-pointer transition-opacity duration-200 max-w-sm overflow-hidden">
       <motion.img
@@ -17,35 +22,29 @@ const ExperienceCard = (props: Props) => {
         }}
         transition={{ duration: 1.2 }}
         viewport={{ once: true }}
-        src="https://i.pinimg.com/564x/33/fa/78/33fa789a039dbd245629fa50a31c716a.jpg"
+        src={urlFor(experience?.companyImage).url()}
         alt="logo"
         className="w-32 h-32 rounded-full object-cover object-center"
       />
       <div className="px-0 md:px-10">
-        <h4 className="text-3xl font-light">Job Title</h4>
-        <p className="uppercase font-bold mt-1">Company name</p>
-        <p className="text-sm font-light mb-4">Date to Date</p>
+        <h4 className="text-2xl font-light">{experience.jobTitle}</h4>
+        <p className="uppercase font-bold mt-1">{experience.company}</p>
+        <p className="text-sm font-light mb-4">
+          {experience.dateStarted} to {experience.dateEnded}
+        </p>
         <div className="flex space-x-2 my-2 mb-3">
-          <img
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/2048px-Unofficial_JavaScript_logo_2.svg.png"
-            alt=""
-            className="h-7 w-7 rounded-full"
-          />
-          <img
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/2048px-Unofficial_JavaScript_logo_2.svg.png"
-            alt=""
-            className="h-7 w-7 rounded-full"
-          />
-          <img
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/2048px-Unofficial_JavaScript_logo_2.svg.png"
-            alt=""
-            className="h-7 w-7 rounded-full"
-          />
+          {experience.technologies.map((tech) => (
+            <img
+              src={urlFor(tech?.image).url()}
+              alt={tech.title}
+              className="h-7 w-7 rounded-full"
+            />
+          ))}
         </div>
         <ul className="list-disc space-y-2 ml-5">
-          <li>description here</li>
-          <li>description here</li>
-          <li>description here</li>
+          {experience.points.map((point) => (
+            <li>{point}</li>
+          ))}
         </ul>
       </div>
     </article>

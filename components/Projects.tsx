@@ -1,11 +1,14 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Project from "./Project";
+import { Project as pj } from "../typings";
 
-type Props = {};
+type Props = {
+  projects: pj[];
+};
 
-const Projects = (props: Props) => {
-  const projects = ["hi", "hello", "hihi", "howdy"];
+const Projects = ({ projects }: Props) => {
+  //console.log(projects);
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -19,7 +22,7 @@ const Projects = (props: Props) => {
       <div className="w-full absolute top-[25%] bg-purple-3/20 left-0 h-[500px] -skew-y-12"></div>
       <div className="scrollbar-thin relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar-track-purple-2 scrollbar-thumb-purple-9/50">
         {projects.map((project) => (
-          <Project />
+          <Project project={project} />
         ))}
       </div>
     </motion.div>
