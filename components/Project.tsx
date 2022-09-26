@@ -16,7 +16,7 @@ const Project = (props: Props) => {
           opacity: 1,
         }}
         transition={{
-          duration: 1.3,
+          duration: 1.1,
         }}
         viewport={{ once: true }}
         src="https://i.pinimg.com/564x/33/fa/78/33fa789a039dbd245629fa50a31c716a.jpg"

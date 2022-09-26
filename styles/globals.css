@@ -17,5 +17,9 @@ body {
   .heroBtn{
     @apply px-6 py-2 border rounded-full uppercase mx-2 border-purple-3 text-xs tracking-widest text-purple-9 hover:border-purple-9/40 hover:text-purple-8 transition-all
   }
+
+  .contactInput{
+    @apply outline-none bg-purple-200/10 rounded-md border-b px-6 py-4 border-purple-2 text-purple-9 placeholder-purple-9 transition-all focus:border-purple-9 focus:text-purple-8
+  }
 }
 
