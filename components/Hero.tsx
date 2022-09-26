@@ -2,11 +2,16 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { Cursor, useTypewriter } from "react-simple-typewriter";
+import { urlFor } from "../sanity";
+import { PageInfo } from "../typings";
 import BackgroundStars from "./BackgroundStars";
 
-type Props = {};
+type Props = {
+  pageInfo: PageInfo;
+};
 
-const Hero = (props: Props) => {
+const Hero = ({ pageInfo }: Props) => {
+  //console.log(pageInfo);
   const [text, count] = useTypewriter({
     words: [
       "What's up? I'm Dese!",
@@ -23,19 +28,20 @@ const Hero = (props: Props) => {
             src={"https://i.pinimg.com/564x/8e/6f/c8/8e6fc8d13af0fcaac52e7a76890819b1.jpg"}
             layout="fill"
             objectFit="cover"
+            {urlFor(pageInfo?.heroImage).url()}
             height="128px"
             width="128px"
             alt='Picture of Dese Elumaro'
             className='relative rounded-full mx-auto h-32 w-32'
         /> */}
       <img
-        src="https://i.pinimg.com/564x/4a/c5/b7/4ac5b77a51fb006b10950b1a9747bced.jpg"
+        src={urlFor(pageInfo?.heroImage).url()}
         alt=""
         className="rounded-full w-32 h-auto mx-auto object-cover absolute top-64 left-0 right-0"
       />
       <div className="absolute top-96 left-0 right-0 text-center pt-3">
         <h2 className="text-xs md:text-sm uppercase text-purple-9 pb-2 tracking-[10px]">
-          Software Engineer
+          {pageInfo.role}
         </h2>
         <h1 className="text-purple-8 text-2xl md:text-4xl">
           <span>{text}</span>

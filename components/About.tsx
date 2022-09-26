@@ -1,9 +1,13 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { PageInfo } from "../typings";
+import { urlFor } from "../sanity";
 
-type Props = {};
+type Props = {
+  pageInfo: PageInfo;
+};
 
-const About = (props: Props) => {
+const About = ({ pageInfo }: Props) => {
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -28,7 +32,7 @@ const About = (props: Props) => {
           transition={{
             duration: 1.3,
           }}
-          src="https://i.pinimg.com/564x/8a/73/bf/8a73bf27729f525f887d8c3e34026d3c.jpg"
+          src={urlFor(pageInfo?.profilePic).url()}
           alt="Dese in the snow!"
           className="mb-6 md:mb-0 flex-shrink-0 w-36 h-36 rounded-full object-cover md:rounded-lg md:w-64 md:h-96 lg:w-[400px] lg:h-[500px]"
         />
@@ -51,18 +55,7 @@ const About = (props: Props) => {
             Hihi! My name is Adesemi "Dese" Chloe Elumaro
           </h4>
           <p className="md:leading-7 text-xs md:text-lg">
-            I am a junior at Duke University, NC studying Computer Science with
-            a minor in Economics. I am really interested in exploring how the
-            intersection of education, finance/economics, and technology can
-            help under-developing countries have a larger part of the global
-            economy! I recognize I am still relatively young and have a lot to
-            learn so I am always really excited about meeting new people who
-            share my interests and gaining knowledge by exploring different
-            product-driven full-stack development projects in the aforementioned
-            fields. I LOVE creating projects that have an impact on at least one
-            person. In my freetime, I run a web design studio called MagnACE,
-            make Youtube videos, indulge in the bible, read books of various
-            genres, watch anime, and play games!
+            {pageInfo?.backgroundInformation}
           </p>
         </motion.div>
       </div>
