@@ -8,7 +8,8 @@ type Props = {
   socials: Social[];
 };
 
-const Header = (socials: Props) => {
+const Header = ({ socials }: Props) => {
+  //console.log(typeof socials);
   return (
     <header className="flex items-start justify-between sticky top-0 max-w-7xl mx-auto z-10 md:items-center">
       {/* Social Icons */}
