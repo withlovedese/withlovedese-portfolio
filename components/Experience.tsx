@@ -15,10 +15,6 @@ const Experience = (props: Props) => {
         <ExperienceCard />
         <ExperienceCard />
         <ExperienceCard />
-        <ExperienceCard />
-        <ExperienceCard />
-        <ExperienceCard />
-        <ExperienceCard />
       </div>
     </div>
   );
