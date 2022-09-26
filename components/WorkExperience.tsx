@@ -1,10 +1,8 @@
 import React from "react";
 import ExperienceCard from "./ExperienceCard";
-import { motion } from "framer-motion";
-
 type Props = {};
 
-const Experience = (props: Props) => {
+const WorkExperience = (props: Props) => {
   return (
     <div className="h-screen flex relative overflow-hidden flex-col text-left md:flex-row max-w-full px-10 items-center mx-auto justify-evenly">
       <h3 className="absolute top-20 tracking-[20px] uppercase text-purple-9 font-extrabold text-center">
@@ -20,4 +18,4 @@ const Experience = (props: Props) => {
   );
 };
 
-export default Experience;
+export default WorkExperience;
