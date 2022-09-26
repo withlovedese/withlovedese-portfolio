@@ -4,7 +4,6 @@ import Link from "next/link";
 import About from "../components/About";
 import Contact from "../components/Contact";
 import WorkExperience from "../components/WorkExperience";
-import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Hero from "../components/Hero";
 import Projects from "../components/Projects";
@@ -26,6 +25,7 @@ type Props = {
 };
 
 const Home = ({ pageInfo, experiences, skills, projects, socials }: Props) => {
+  //console.log(socials);
   return (
     <div className="text-purple-7 h-screen bg-purple-2 snap-y snap-mandatory z-0 overflow-y-scroll overflow-x-hidden scrollbar scrollbar-track-purple-2 scrollbar-thumb-purple-9/50">
       <Head>
@@ -71,6 +71,8 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
   const skills: Skill[] = await fetchSkills();
   const projects: Project[] = await fetchProjects();
   const socials: Social[] = await fetchSocials();
+
+  console.log(experiences);
 
   return {
     props: {

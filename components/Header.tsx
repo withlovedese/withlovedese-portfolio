@@ -8,7 +8,7 @@ type Props = {
   socials: Social[];
 };
 
-const Header = ({ socials }: Props) => {
+const Header = (socials: Props) => {
   return (
     <header className="flex items-start justify-between sticky top-0 max-w-7xl mx-auto z-10 md:items-center">
       {/* Social Icons */}
@@ -36,31 +36,6 @@ const Header = ({ socials }: Props) => {
             bgColor="transparent"
           />
         ))}
-        <SocialIcon
-          url="https://www.linkedin.com/in/adesemicelumaro/"
-          fgColor="#d7ccf0"
-          bgColor="transparent"
-        />
-        <SocialIcon
-          url="https://twitter.com/withlovedese"
-          fgColor="#d7ccf0"
-          bgColor="transparent"
-        />
-        <SocialIcon
-          url="https://www.youtube.com/channel/UCmuTrRe2fdD81PWsWF5I58Q"
-          fgColor="#d7ccf0"
-          bgColor="transparent"
-        />
-        <SocialIcon
-          url="https://github.com/withlovedese"
-          fgColor="#d7ccf0"
-          bgColor="transparent"
-        />
-        <SocialIcon
-          url="https://www.instagram.com/withlovedese/"
-          fgColor="#d7ccf0"
-          bgColor="transparent"
-        />
       </motion.div>
 
       {/* Contact me  */}

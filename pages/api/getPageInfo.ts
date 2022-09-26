@@ -5,7 +5,7 @@ import { PageInfo } from "../../typings";
 //import {PageInfo, Social} from '../../typings'
 
 const query = groq`
-    *[_type == "project"][0]
+    *[_type == "pageInfo"][0]
 `;
 
 type Data = {
