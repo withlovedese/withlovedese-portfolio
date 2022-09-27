@@ -22,7 +22,7 @@ const Projects = ({ projects }: Props) => {
       <div className="w-full absolute top-[25%] bg-purple-3/20 left-0 h-[500px] -skew-y-12"></div>
       <div className="scrollbar-thin relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar-track-purple-2 scrollbar-thumb-purple-9/50">
         {projects.map((project) => (
-          <Project project={project} />
+          <Project key={project._id} project={project} />
         ))}
       </div>
     </motion.div>
