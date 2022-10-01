@@ -23,7 +23,7 @@ const Skill = ({ directionLeft, skill }: Props) => {
       transition={{ duration: 1 }}
       className="group relative flex cursor-pointer"
     >
-      <div className="w-12 h-12 md:h-16 md:w-16 rounded-full object-cover object-center border border-purple-5 p-2 filter group-hover:grayscale transition duration-300 ease-in-out">
+      <div className="w-9 h-9 md:h-16 md:w-16 rounded-full object-cover object-center border border-purple-5 p-2 filter group-hover:grayscale transition duration-300 ease-in-out">
         <Image
           alt={skill?.title}
           layout="fill"
@@ -33,7 +33,7 @@ const Skill = ({ directionLeft, skill }: Props) => {
         />
       </div>
 
-      <div className="absolute opacity-0 group-hover:opacity-80 transition duration-300 ease-in-out group-hover:bg-white w-12 h-12 md:h-16 md:w-16 rounded-full z-0">
+      <div className="absolute opacity-0 group-hover:opacity-80 transition duration-300 ease-in-out group-hover:bg-white w-9 h-9 md:h-16 md:w-16 rounded-full z-0">
         <div className="flex items-center justify-center h-full">
           <p className="font-bold text-black opacity-100">{skill.progress}%</p>
         </div>
