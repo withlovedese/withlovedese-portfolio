@@ -52,7 +52,7 @@ const About = ({ pageInfo }: Props) => {
           className="space-y-10 px-0 md:px-10"
         >
           <h4 className="md:text-3xl text-xl">
-            Hihi! My name is Adesemi "Dese" Chloe Elumaro
+            Hihi! My name is Adesemi {`"${pageInfo.name}"`} Chloe Elumaro
           </h4>
           <p className="md:leading-7 text-xs md:text-lg">
             {pageInfo?.backgroundInformation}

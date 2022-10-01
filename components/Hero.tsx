@@ -34,11 +34,16 @@ const Hero = ({ pageInfo }: Props) => {
             alt='Picture of Dese Elumaro'
             className='relative rounded-full mx-auto h-32 w-32'
         /> */}
-      <img
-        src={urlFor(pageInfo?.heroImage).url()}
-        alt=""
-        className="rounded-full w-32 h-auto mx-auto object-cover absolute top-64 left-0 right-0"
-      />
+      <div className="w-32 h-32 mx-auto object-cover absolute top-64 left-0 right-0">
+        <Image
+          src={urlFor(pageInfo?.heroImage).url()}
+          alt=""
+          objectFit="cover"
+          layout="fill"
+          className="rounded-full"
+        />
+      </div>
+
       <div className="absolute top-96 left-0 right-0 text-center pt-3">
         <h2 className="text-xs md:text-sm uppercase text-purple-9 pb-2 tracking-[10px]">
           {pageInfo.role}
@@ -58,8 +63,13 @@ const Hero = ({ pageInfo }: Props) => {
           <Link href="#projects">
             <button className="heroBtn">Projects</button>
           </Link>
-          <Link href="#experience">
+          {/* <Link href="#experience">
             <button className="heroBtn">Experience</button>
+          </Link> */}
+          <Link href="resume.pdf">
+            <a target="_blank">
+              <button className="heroBtn">Resume</button>
+            </a>
           </Link>
         </div>
       </div>

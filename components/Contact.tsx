@@ -28,7 +28,7 @@ const Contact = (props: Props) => {
       </h3>
 
       <div className="flex flex-col space-y-4 absolute top-36">
-        <h4 className="text-semibold text-3xl text-center">Let's talk</h4>
+        <h4 className="text-semibold text-3xl text-center">Talk to me!</h4>
 
         <div className="space-y-5">
           <div className="flex items-center space-x-5">
