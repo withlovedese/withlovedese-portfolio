@@ -27,29 +27,33 @@ const Contact = (props: Props) => {
         Contact me
       </h3>
 
-      <div className="flex flex-col space-y-4 absolute top-36">
+      <div className="flex flex-col space-y-4 absolute top-36 sm:justify-center">
         <h4 className="text-semibold text-3xl text-center">Talk to me!</h4>
 
-        <div className="space-y-5">
+        <div className="space-y-5 flex flex-col items-center justify-center">
           <div className="flex items-center space-x-5">
             <PhoneRoundedIcon className="text-purple-9 h-7 w-7 animate-pulse" />
-            <p className="text-lg">+1 (919) 564 9176, +234 916 545 0375</p>
+            <p className="text-sm md:text-lg">
+              +1 (919) 564 9176, +234 916 545 0375
+            </p>
           </div>
           <div className="flex items-center space-x-5">
             <EmailRoundedIcon className="text-purple-9 h-7 w-7 animate-pulse" />
-            <p className="text-lg">adesemie@gmail.com</p>
+            <p className="text-sm md:text-lg">adesemie@gmail.com</p>
           </div>
           <div className="flex items-center space-x-5">
             <LocationOnIcon className="text-purple-9 h-7 w-7 animate-pulse" />
-            <p className="text-lg">North Carolina, USA / Lagos, Nigeria</p>
+            <p className="text-sm md:text-lg">
+              North Carolina, USA / Lagos, Nigeria
+            </p>
           </div>
         </div>
 
         <form
           onSubmit={handleSubmit(onSubmit)}
-          className="flex flex-col mx-auto w-fit space-y-3"
+          className="flex flex-col mx-auto w-fit md:space-y-3 space-y-1"
         >
-          <div className="flex space-x-2">
+          <div className="flex md:space-x-2 space-x-1">
             <input
               {...register("name")}
               className="contactInput"
@@ -76,7 +80,7 @@ const Contact = (props: Props) => {
           />
           <button
             type="submit"
-            className="bg-purple-9 py-5 px-10 rounded-md text-purple-2 font-bold text-lg"
+            className="bg-purple-9 md:py-5 md:px-10 py-3 px-5 rounded-md text-purple-2 font-bold md:text-lg text-base"
           >
             Submit
           </button>

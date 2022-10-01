@@ -19,7 +19,7 @@ body {
   }
 
   .contactInput{
-    @apply outline-none bg-purple-200/10 rounded-md border-b px-6 py-4 border-purple-2 text-purple-9 placeholder-purple-9 transition-all focus:border-purple-9 focus:text-purple-8
+    @apply outline-none bg-purple-200/10 rounded-md border-b md:px-6 md:py-4 border-purple-2 text-purple-9 placeholder-purple-9 transition-all focus:border-purple-9 focus:text-purple-8 px-1 py-2
   }
 }
 

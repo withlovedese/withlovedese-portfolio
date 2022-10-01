@@ -27,7 +27,7 @@ type Props = {
 const Home = ({ pageInfo, experiences, skills, projects, socials }: Props) => {
   //console.log(socials);
   return (
-    <div className="text-purple-7 h-screen bg-purple-2 snap-y snap-mandatory z-0 overflow-y-scroll overflow-x-hidden scrollbar scrollbar-track-purple-2 scrollbar-thumb-purple-9/50">
+    <div className="text-purple-7 h-screen bg-purple-2 snap-y snap-mandatory z-0 overflow-y-scroll overflow-x-hidden scrollbar-thin scrollbar-track-purple-2 scrollbar-thumb-purple-9/50 md:scrollbar">
       <Head>
         <title>Adesemi Chloe Elumaro</title>
       </Head>
