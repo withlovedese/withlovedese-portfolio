@@ -90,7 +90,7 @@ const Home = ({ pageInfo, experiences, skills, projects, socials }: Props) => {
         <WorkExperience experiences={experiences} />
       </section> */}
       <section id="contact" className="snap-end">
-        <Contact />
+        <Contact pageInfo={pageInfo} />
       </section>
 
       <Link href="#hero">

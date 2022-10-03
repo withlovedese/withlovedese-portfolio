@@ -3,6 +3,7 @@ import PhoneRoundedIcon from "@mui/icons-material/PhoneRounded";
 import EmailRoundedIcon from "@mui/icons-material/EmailRounded";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import { useForm, SubmitHandler } from "react-hook-form";
+import { PageInfo } from "../typings";
 
 type Inputs = {
   name: string;
@@ -11,9 +12,11 @@ type Inputs = {
   message: string;
 };
 
-type Props = {};
+type Props = {
+  pageInfo: PageInfo;
+};
 
-const Contact = (props: Props) => {
+const Contact = ({ pageInfo }: Props) => {
   const { register, handleSubmit } = useForm<Inputs>();
   const onSubmit: SubmitHandler<Inputs> = (data) => {
     window.location.href = `mailto:semielumaro@gmail.com?subject=${data.subject}&body=Hi, I'm ${data.name}, 
@@ -33,19 +36,15 @@ const Contact = (props: Props) => {
         <div className="space-y-5 flex flex-col items-center justify-center">
           <div className="flex items-center space-x-5">
             <PhoneRoundedIcon className="text-purple-9 h-7 w-7 animate-pulse" />
-            <p className="text-sm md:text-lg">
-              +1 (919) 564 9176, +234 916 545 0375
-            </p>
+            <p className="text-sm md:text-lg">{pageInfo.phoneNumber}</p>
           </div>
           <div className="flex items-center space-x-5">
             <EmailRoundedIcon className="text-purple-9 h-7 w-7 animate-pulse" />
-            <p className="text-sm md:text-lg">adesemie@gmail.com</p>
+            <p className="text-sm md:text-lg">{pageInfo.email}</p>
           </div>
           <div className="flex items-center space-x-5">
             <LocationOnIcon className="text-purple-9 h-7 w-7 animate-pulse" />
-            <p className="text-sm md:text-lg">
-              North Carolina, USA / Lagos, Nigeria
-            </p>
+            <p className="text-sm md:text-lg">{pageInfo.address}</p>
           </div>
         </div>
 
