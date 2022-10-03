@@ -15,6 +15,7 @@ import { fetchSkills } from "../utils/fetchSkills";
 import { fetchExperience } from "../utils/fetchExperience";
 import { fetchProjects } from "../utils/fetchProjects";
 import { fetchSocials } from "../utils/fetchSocials";
+import { urlFor } from "../sanity";
 
 type Props = {
   pageInfo: PageInfo;
@@ -30,6 +31,46 @@ const Home = ({ pageInfo, experiences, skills, projects, socials }: Props) => {
     <div className="text-purple-7 h-screen bg-purple-2 snap-y snap-mandatory z-0 overflow-y-scroll overflow-x-hidden scrollbar-thin scrollbar-track-purple-2 scrollbar-thumb-purple-9/50 md:scrollbar">
       <Head>
         <title>Adesemi Chloe Elumaro</title>
+        <meta
+          property="og:title"
+          content="Adesemi Elumaro | Software Engineer"
+        />
+        <meta property="og:description" content="Weeb extraordinaire" />
+        <meta property="og:image" content={urlFor(pageInfo?.heroImage).url()} />
+        <meta
+          property="og:url"
+          content="https://withlovedese-portfolio-withlovedese.vercel.app/"
+        />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="Adesemi Elumaro | Software Developer"
+        />
+        <meta name="twitter:description" content="Weeb extraordinaire" />
+        <meta
+          name="twitter:image"
+          content={urlFor(pageInfo?.heroImage).url()}
+        />
+        <meta
+          name="description"
+          content="I'm a junior at Duke University who's really excited about learning! Get in touch to know more!"
+        />
+        <meta charSet="utf-8" />
+        <meta
+          name="keyword"
+          content="portfolio, javascript, developer, adesemi, elumaro, react, nextjs"
+        ></meta>
+        <link
+          rel="shortcut icon"
+          href="./public/favicon.ico"
+          type="image/x-icon"
+        />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1, 
+      shrink-to-fit=no"
+        />
       </Head>
 
       <Header socials={socials} />
